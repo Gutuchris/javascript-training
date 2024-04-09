@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecttask</title>
+</head>
+
+<body>
+
+    <script>
+        //my_object= [23, “Jane”, (560), [“Lesson”, “Maths”, {“currency” : “KES”}], 987, (76,”John”)]
+        //Display:
+        //1. KES
+        //2. 560
+        //3. Maths
+
+        let my_object = [23, "Jane", 560, ["Lesson", "Maths", { "currency": "KES" }], 987, [76, "John"]];
+
+        // Outputting the elements to the console
+        console.log(my_object[3][2]["currency"]); // Accessing "currency" from the nested object
+        console.log(my_object[2]); // Accessing the number 560
+        console.log(my_object[3][1]); // Accessing "Maths" from the nested array
+
+
+        //4. In the object with the key currency, add another key “amount” with value 90
+
+        my_object[3][2]['amount']=90
+        console.log(my_object)
+
+
+        //5. Reverse 987 to 789 without using an inbuilt -method or Assigning 789 manually.
+        // Hint: Strings can be reversed using reverse() functions
+
+
+
+        // Function to reverse a number without using built-in methods
+        function reverseNumber(n) {
+            let reversed = '';
+            let numStr = n.toString();
+            for (let i = numStr.length - 1; i >= 0; i--) {
+                reversed += numStr[i];
+            }
+            return parseInt(reversed);
+        }
+
+        // Reverse the number 987
+
+        let index987 = my_object.indexOf(987);
+        if (index987 !== -1) {
+            my_object[index987] = reverseNumber(my_object[index987]);
+        }
+
+        console.log("Reversed Number:", my_object[index987])
+
+
+
+        //6. Change the name “John” to “Jane” . 
+
+        my_object[5][1] = 'Jane'
+        console.log(my_object)
+
+    </script>
+
+</body>
+
+</html>
