@@ -26,7 +26,7 @@
 
         //4. In the object with the key currency, add another key “amount” with value 90
 
-        my_object[3][2]['amount']=90
+        my_object[3][2]['amount'] = 90
         console.log(my_object)
 
 
@@ -36,24 +36,24 @@
 
 
         // Function to reverse a number without using built-in methods
-        function reverseNumber(n) {
-            let reversed = '';
-            let numStr = n.toString();
-            for (let i = numStr.length - 1; i >= 0; i--) {
-                reversed += numStr[i];
-            }
-            return parseInt(reversed);
-        }
 
-        // Reverse the number 987
+        // convert to a string
 
-        let index987 = my_object.indexOf(987);
-        if (index987 !== -1) {
-            my_object[index987] = reverseNumber(my_object[index987]);
-        }
+        let a = String(my_object[4])
+        // split to for an array
 
-        console.log("Reversed Number:", my_object[index987])
+        a = a.split('')
 
+        //reverse the array
+        a = a.reverse()
+
+        //join the array to form a string
+        a = a.join('')
+
+        //convert it back to a number
+        a = Number(my_object[4])
+
+        console.log(my_object)
 
 
         //6. Change the name “John” to “Jane” . 
